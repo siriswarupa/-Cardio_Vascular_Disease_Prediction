@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/aboutus.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+    <style>
+        body {
+    padding-top: 3.5rem;
+}
+.contact-info {
+            margin-top: 50px;
+            text-align: center;
+            animation: slide-up 1s ease;
+        }
+header {
+            background-color: #7d8d9e;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+nav {
+    font-family: sans-serif;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+    </style>
+
+</head>
+<body>
+    <form id="form1">
+        <header>
+          <div class="scrolling-text"><h1>Models Summary</h1>
+          </div>
+            <!--Navigation Bar-->
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li> 
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+         <main role="main">
+
+  <div class="jumbotron">
+    <div class="container">
+      <div class="col-md">
+        <h2>Random Forest</h2>
+        <p>Random forest is a supervised learning algorithm which is used for both classification as well as regression .But however, it is mainly used for classification problems.
+</p>
+<ul>
+    <li>It runs efficiently on large data bases.</li>
+    <li>It can handle thousands of input variables without variable deletion.</li>    
+    <li>It gives estimates of what variables are important in the classification.</li>
+    <li>It generates an internal unbiased estimate of the generalization error as the forest building progresses.</li>
+</ul>
+
+     </div>
+      <div class="container">
+        <h2>Naive Bayes</h2>
+<p>Naive Bayes classifier depends upon the Bayesian theorem which solely depends of independent events. It is easy to model the system using this classifier when the dataset is extremely large. 
+Bayes theorem provides a way of calculating posterior probability of an event A given that event B has occurred .Bayesian formula is given by:
+</p>
+<ul>
+    <li>    Naïve Bayes is one of the fast and easy ML algorithms to predict a class of datasets.   </li>
+    <li>It can be used for Binary as well as Multi-class Classifications.</li>
+    <li>It performs well in Multi-class predictions as compared to the other Algorithms.</li>
+    <li>It is the most popular choice for text classification problems.</li>
+</ul>
+      </div>
+      <div class="col-md">
+      <h2>Support Vector machines</h2>
+      <p>SVM is a powerful algorithm for both classification and regression
+tasks, aiming to find a hyper plane that best separates
+data points into distinct classes.
+</p>
+<ul>
+   <li>It is effective in high dimensional spaces.</li> 
+<li> It is still effective in cases where number of dimensions is greater than the number of samples.</li>
+<li>Uses a subset of training points in the decision function (called support vectors), so it is also memory efficient.</li>
+<li>Versatile: different Kernel functions can be specified for the decision function. Common kernels are provided, but it is also possible to specify custom kernels.</li>
+</ul>            
+</div>
+<div class="col-md">
+    <h2>Logistic Regression</h2>
+    <p>Logistic regression is a supervised machine learning algorithm that accomplishes binary classification tasks by predicting the probability of an outcome, event, or observation. The model delivers a binary or dichotomous outcome limited to two possible outcomes: yes/no, 0/1, or true/false.</p>
+    <ul>
+<li>It analyzes the relationship between one or more independent variables and classifies data into discrete classes.</li> 
+<li>It is extensively used in predictive modeling, where the model estimates the mathematical probability of whether an instance belongs to a specific category or not.</li>
+<li>It is easy to implement, easily interpretable, and used widely by data analysts and scientists.</li>
+</ul>
+</div>
+<div class="col-md">
+<h2>XG Boosting</h2>
+<p>XGBoost is an optimized distributed gradient boosting library designed for efficient and scalable training of machine learning models.
+XG Boost stands for “Extreme Gradient Boosting”.
+</p>
+<ul>
+    <li>
+        It is an ensemble learning method that combines the predictions of multiple weak models to produce a stronger prediction.
+    </li>
+    <li>XGBoost is its efficient handling of missing values, which allows it to handle real-world data with missing values without requiring significant pre-processing.</li>
+    <li>XGBoost is designed for efficient and scalable training of machine learning models, making it suitable for large datasets.</li>
+</ul>
+</div>
+<div class="col-md">
+    <h4>Accuracy Visualization of Different Models</h4>
+    <img src="{{ url_for('static', filename='visual.png') }}">
+</div>
+<div class="col-md">
+    <h4>Evaluation Metrics of Models</h4>
+    <img src="{{ url_for('static', filename='model.png') }}">
+</div>
+<div class="col-md"><h2>Ensemble Model</h2>
+    <img src="{{ url_for('static', filename='img.jpg') }}">
+    <p>Ensemble learning is a machine learning technique that combines multiple individual models (learners) to improve predictive performance. Two popular ensemble algorithms are Random Forest and Gradient Boosting.
+The motivation for using ensemble models is to reduce the generalization of the prediction.
+It improves the performance of the machine learning models.
+</p>
+</div>
+    
+    </div>
+
+  </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
+
+    </form>
+</body>
+</html>

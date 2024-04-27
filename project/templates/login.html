@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Heart Disease Prediction</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    
+<style>
+    * {
+        font-size: 40px;
+    }
+   
+    /* Split the screen in half */
+    .split {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+    /* Control the left side */
+    .left {
+        left: 0;
+        background-color:#c0ebe6 ;
+    }
+
+    /* Control the right side */
+    .right {
+        right: 0;
+        background-color: #c0ebe6;
+    }
+
+    /* If you want the content centered horizontally and vertically */
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    /* Style the image inside the centered container, if needed */
+    .centered img {
+        width: 400px;
+        border-radius: 50%;
+    }
+
+    .body {
+        background-image: url('https://www.bhf.org.uk/-/media/news-images/2021/march/ai-heart-tool-640x410px.jpg?h=65%25&w=100%25&rev=c51b0b8af9d64101997bfd9252fb04a2&hash=D22AFDC9BCB488C861CFB81D348FCA33');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    #entry {
+        font-size: 20px;
+        height: 40px;
+        width: 360px;
+        border-radius: 5px;
+        background-color: #f7f7f7;
+    }
+
+    #entry:hover {
+        background-color: #fcfcfc;
+    }
+
+    #submit {
+        font-size: 25px;
+        border-radius: 8px;
+        background-color: #94d6e3;
+        width: 230px;
+    }
+
+    #submit:hover {
+        background-color: #2d8ea1;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .right {
+            right: 0;
+            background-color: #c0ebe6;
+        }
+        /* Split the screen in half */
+        .split {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+    }
+</style>
+</head>
+<body>
+   
+
+<div class="bg">
+    <center>
+            <div class="split left">
+            <div class="centered">
+                
+                <img class="img" src="https://cdn.shopify.com/s/files/1/0261/5905/products/3144160904-MATT_1548730871731_grande.png?v=1571708834" alt="Heart">
+                 
+                <h5>Heart Disease Prediction</h5>
+            </div>
+        </div>
+
+        <div class="split right">
+            <div class="centered">
+                <h4>Login Here</h4>
+                <hr>
+    <form action="{{ url_for('login') }}" method="post">
+	    {% if mesage is defined and mesage %}
+			<div class="alert alert-warning">{{ mesage }}</div>
+		{% endif %}
+        <input type="text" id="entry" name="email" placeholder="Enter Email" required >
+                    <br>
+        <input type="password" id="entry" name="password" placeholder="Enter password" name="pswd">
+                    <br>
+        <input type="submit" value="Login" id="submit">
+                    <br><br>
+        
+        <h4><p class="bottom" style="font-size: 20px;">Dont't have an account?  <a style="font-size: 20px;" href="{{url_for('register')}}"> Register here</a></p></h4>
+        <!-- Button to go back to home page -->
+      <!-- Text link to go back to home page with reduced font size -->
+<h4><a href="{{ url_for('index') }}" style="font-size: 20px;">Back to Home</a></h4>
+
+	</form>	
+    </center>
+</div>
+</body>
+</html>

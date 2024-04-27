@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Heart Disease Prediction System | Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f0f8ff; /* Light blue background color */
+        }
+       
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+        .feature {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .feature h2 {
+            margin-bottom: 10px;
+        }
+        .feature p {
+            margin-bottom: 10px;
+        }
+        .feature ul {
+            list-style: none;
+            padding: 0;
+        }
+        .feature li {
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .feature .range {
+            font-weight: bold;
+        }
+    
+    </style>
+</head>
+<body>
+    <form id="form1">
+        <header>
+            <!--Navigation Bar-->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#"><b>Predictive Analytics on Cardiovascular Disease Diagnosis</b></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/heart">Predict</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/bmi">BMI_Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/map">MAP_Calculator</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </form>
+    
+    <div class="feature">
+        <h2>Gender</h2>
+        <p>The gender feature represents the gender of the individual.</p>
+        <p>Possible values:</p>
+        <ul>
+            <li><span class="range">0</span>: Female</li>
+            <li><span class="range">1</span>: Male</li>
+        </ul>
+        <p>Cardiovascular disease develops 7 to 10 years later in women than in men and is still the major cause of death in women over the age of 65 years.</p>
+    </div>
+
+    <div class="feature">
+        <h2>Cholesterol</h2>
+        <p>The cholesterol feature represents the cholesterol level of the individual.</p>
+        <p>Possible values:</p>
+        <ul>
+            <li><span class="range">0</span>: Normal<br>Less than 200mg/dl </li>
+            <li><span class="range">1</span>: Above Normal<br>Between 200mg/dl and 239mg/dl</li>
+            <li><span class="range">2</span>: High<br>Greater than 240mg/dl</li>
+        </ul>
+        <p>If the level of cholesterol is 240 mg/dl or greater than 240 mg/dl it may lead to heart disease</p>
+    </div>
+    <div class="feature">
+        <h2>Glucose</h2>
+        <p>The Glucose feature represents the Glucose level of the individual.</p>
+        <p>Possible values:</p>
+        <ul>
+            <li><span class="range">0</span>: Normal<br>Less than 100mg/dl </li>
+            <li><span class="range">1</span>: Above Normal<br>Between 100mg/dl and 125mg/dl</li>
+            <li><span class="range">2</span>: High<br>Greater than 126mg/dl</li>
+        </ul>
+        <p>If blood sugar levels above 9.4 mmol/L increased the risks of hospitalisation by 9-15% for heart failure or cardiovascular causes.</p>
+    </div>
+  
+    <div class="feature">
+        <h2>Age_group </h2>
+        <p>Age_group represents the age of the individual grouped into 5-year spans</p>
+        <p>Possible values:</p>
+        <ul>
+            <li><span class="range">0</span>:Age of less than 30 years</li>
+            <li><span class="range">1</span>:Age between 30 years and 34 years</li>
+            <li><span class="range">2</span>:Age between 35 years and 39 years</li>
+            <li><span class="range">3</span>:Age between 40 years and  44 years</li>
+            <li><span class="range">4</span>:Age between 45 years and  49 years </li>
+            <li><span class="range">5</span>:Age between 50 years and  54 years</li>
+            <li><span class="range">6</span>:Age between 55 years and  59 years </li>
+            <li><span class="range">7</span>:Age between 60 years and  64 years </li>
+        </ul>
+        <p>Adults age 60 and older are more likely than younger people to suffer from cardiovascular disease.</p>
+    </div>
+    <div class="feature">
+        <h2>BMI </h2>
+        <p>BMI represents Body mass Index of individual.</p>
+        <p>Possible values:</p>
+        <ul>
+            <li><span class="range">0</span>:BMI of between  16 kg/m^2 to 20 kg/m^2</li>
+            <li><span class="range">1</span>:BMI of between  21 kg/m^2 to 25 kg/m^2</li>
+            <li><span class="range">2</span>:BMI of between  26 kg/m^2 to 30 kg/m^2</li>
+            <li><span class="range">3</span>:BMI of between  31 kg/m^2 to 35 kg/m^2</li>
+            <li><span class="range">4</span>:BMI of between  36 kg/m^2 to 40 kg/m^2</li>
+            <li><span class="range">5</span>:BMI of between  41 kg/m^2 to 45 kg/m^2</li>
+        </ul>
+          <p>Obesity, assessed using body mass index (BMI) >30 kg/m2, is an established risk factor for development of coronary heart disease (CHD) in healthy individuals.</p>
+    </div>
+    <div class="feature">
+        <h2> MAP(Mean Arterial Pressure)</h2>
+        <p>Mean Arterial Pressure represents the average blood pressure in a individual arteries during a single cardiac cycle</p>
+        <p>Possible values:</p>
+        <ul>
+            <li><span class="range">0</span>:MAP of between 73 mmhg to 80 mmhg</li>
+            <li><span class="range">1</span>:MAP of between 81 mmhg to 88 mmhg</li>
+            <li><span class="range">2</span>:MAP of between 89 mmhg to 96 mmhg</li>
+            <li><span class="range">3</span>:MAP of between 97 mmhg to 104 mmhg</li>
+            <li><span class="range">4</span>:MAP of between 105 mmhg to 112 mmhg</li>
+            <li><span class="range">5</span>:MAP of between 113 mmhg to 121 mmhg</li>
+        </ul>
+         <p>If you have MAP>=105.68 mmhg it may lead to haert disease. Grade 1 hypertension range is ( 105.68 , 119.00 ), grade 2 hypertension range is ( 119.01 , 132.33 ), and grade 3 hypertension MAP values are ≥132.34.</p>
+    </div>
+</body>
+</html>

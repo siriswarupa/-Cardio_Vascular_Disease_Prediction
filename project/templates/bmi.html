@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+	<title>RiskAssess | Heart Disease Prediction</title>
+</head>
+<style>
+	button
+{
+	border-style:none;
+}
+
+h1, h2, h3, h4, h5{
+    text-align: center;
+
+}
+
+form {
+	margin: 0 auto;
+	margin-top: 3%;
+	margin-left: calc(58% - 400px);
+	margin-right: 21%;
+
+}
+
+form fieldset{
+	padding: 30px;
+	border-width: 20px;
+	border-style: groove;
+    border-color: #5a5a5a;
+	background-color: #fff;
+}
+
+fieldset h1 {
+	color: #5a5a5a;
+	padding-bottom: 20px;
+	margin-left: 35px;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 28px;
+	text-align: center;
+}
+
+fieldset label {
+	margin-left: 20px;
+	margin-right: 40px;
+	padding: 23px;
+	font-size: 20px;
+	display: inline-block;
+    width  : 240px;
+}
+fieldset input{
+	padding:8px;
+	color: #938c8c
+}
+fieldset input:focus{
+	color: #000;
+}
+fieldset button
+{
+	margin-left: 60px;
+	color: #fff;
+	background-color: #5a5a5a;
+	border-radius: 3px;
+	padding: 13px 39px;
+	text-align: center;
+	letter-spacing: 0.9px;
+	text-decoration: none;
+	margin-right: 15px;
+	line-height: 26px;
+	font-size: 16px;
+	box-shadow: 0px 1px 3px 0px #5a5a5a;
+	right: 0px;
+	margin-top: 15px;
+}
+
+
+.submit{
+	margin-left: 60px;
+	color: #fff;
+	background-color: #5a5a5a;
+	border-radius: 3px;
+	padding: 13px 39px;
+	text-align: center;
+	letter-spacing: 0.9px;
+	text-decoration: none;
+	margin-right: 10px;
+	line-height: 26px;
+	font-size: 16px;
+	box-shadow: 0px 1px 3px 0px #5a5a5a;
+	right: 100px;
+	margin-top: 15px;
+}
+
+#link_to_edit{
+    padding-left: 45px;
+}
+
+.fieldset{
+	margin-top: 3%;
+	margin-left: 0%;
+	margin-right: 0%;
+	padding: 30px;
+	border-width: 25px;
+	border-style: ridge;
+	border-color: #257a7a;
+	box-shadow: 6px 13px 13px 0px black;
+	background-color: #ebfffa;
+}
+</style>
+<body>
+	<form id="form1">
+        <header>
+            <!--Navigation Bar-->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#"><b>Predictive Analytics on Cardiovascular Disease Diagnosis</b></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/index">Home</a>
+                        </li>
+						<li class="nav-item active">
+                            <a class="nav-link" href="/bmi">BMI_Calculator</a>
+                        </li>
+						<li class="nav-item active">
+                            <a class="nav-link" href="/map">MAP_Calculator</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/heart">Predict</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </form>
+
+    <h1 style="text-align:center;">BMI Calculator</h1>
+    <h5 style="text-align:center;">Please enter the details</h5>
+
+    <form action="{{ url_for('calculate_bmi')}}" method="post" class="form-inline">
+        <fieldset>
+            <div class="tabcontent" id="new">
+
+                <div class="form-group">
+                    <label for="height">height</label>
+                    <input class="form-control" type="number" name="height" placeholder="in cm" min="150" max="180" required="required"/>
+                 </div>
+                  <div class="form-group">
+                    <label for="weight">weight</label>
+                    <input class="form-control" type="number" name="weight" placeholder="in kg" min="52" max="106" required="required"/>
+                  </div>
+                 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button type="submit" class="btn btn-primary btn-lg">Predict</button>
+
+            </div>
+           
+    <br><br><h4>BMI Result {{ bmi }}</h4> 
+        </fieldset>
+    </form>
+</body>
+
+    
+
+</html>
